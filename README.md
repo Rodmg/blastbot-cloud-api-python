@@ -2,6 +2,14 @@
 
 Blastbot Cloud API Client for python
 
+## Installation
+
+blastbot-cloud-api-python is supported on Python 3.7+. The recommended way to install it is via pip.
+
+```
+pip install blastbot-cloud-api-python
+```
+
 ## Usage
 
 The library is built with asyncio and aiohttp, that means that most of the functions are async and need to run inside the asyncio event loop.
@@ -23,7 +31,7 @@ await api.async_close()
 
 ## Reference
 
-### api
+### blastbot_cloud_api.api
 
 **BlastbotCloudAPI**
 
@@ -37,7 +45,7 @@ await api.async_close()
 - async_get_acs() -> List[Control]: Get al AC controls
 - async_get_irs() -> List[Control]: Get all ir/rf controls
 
-### models.device
+### blastbot_cloud_api.models.device
 
 **Device**
 
@@ -54,7 +62,7 @@ await api.async_close()
 - type: str
 - async_update(): Updates device data from Blastbot Cloud
 
-### models.control
+### blastbot_cloud_api.models.control
 
 **Control**
 
