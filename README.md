@@ -61,15 +61,15 @@ await api.async_close()
 - id: int
 - deviceId: int
 - name: str
-- type: str
+- type: str: (switch, ac or ir)
 - acSettings: dict
 - buttons: List[dict]
 - device: dict
 - switches: List[dict]
-- switch_state() -> bool: Get switch state for switch controls
-- async_control_button(button_id: int): Execute a button action for ir/rf controls
-- async_control_switch(is_on: bool): Control a switch for switch controls
-- async_control_ac(state: str = None, temperature: str = None, fan: str = None): Control the ac state for ac controls.
+- switch_state() -> bool: Get switch state (for switch controls)
+- async_control_button(button_id: int): Execute a button action (for ir/rf controls)
+- async_control_switch(is_on: bool): Control a switch (for switch controls)
+- async_control_ac(state: str = None, temperature: str = None, fan: str = None): Control the ac state (for ac controls)
   - state: "on" or "off"
   - temperature: number of ºC in string
   - fan: one of "auto", "low", "medium" or "high"
