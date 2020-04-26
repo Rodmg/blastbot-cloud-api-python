@@ -33,9 +33,9 @@ await api.async_close()
 - async_get_device(id: int) -> Device: Get a specific device
 - async_get_controls(type: str = None) -> List[Control]: Get controls, optionally filter by type (switch, ac or ir)
 - async_get_control(id: int) -> Control: Get a specific control
-- async_get_switches(self) -> List[Control]: Get all switch controls
-- async_get_acs(self) -> List[Control]: Get al AC controls
-- async_get_irs(self) -> List[Control]: Get all ir/rf controls
+- async_get_switches() -> List[Control]: Get all switch controls
+- async_get_acs() -> List[Control]: Get al AC controls
+- async_get_irs() -> List[Control]: Get all ir/rf controls
 
 ### models.device
 
