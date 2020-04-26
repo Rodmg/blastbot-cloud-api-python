@@ -21,7 +21,7 @@ class Device:
         return self.raw_data["address"]
 
     @property
-    def bridge(self) -> int:
+    def bridge(self) -> dict:
         return self.raw_data["bridge"]
 
     @property
@@ -29,11 +29,11 @@ class Device:
         return self.raw_data["bridgeId"]
 
     @property
-    def config(self) -> int:
+    def config(self) -> dict:
         return self.raw_data["config"]
 
     @property
-    def connected(self) -> int:
+    def connected(self) -> bool:
         return self.raw_data["connected"]
 
     @property
@@ -57,23 +57,23 @@ class Device:
         return self.raw_data["loggedAt"]
 
     @property
-    def mac(self) -> int:
+    def mac(self) -> str:
         return self.raw_data["mac"]
 
     @property
-    def state(self) -> int:
+    def state(self) -> str:
         return self.raw_data["state"]
 
     @property
-    def token(self) -> int:
+    def token(self) -> str:
         return self.raw_data["token"]
 
     @property
-    def udid(self) -> int:
+    def udid(self) -> str:
         return self.raw_data["udid"]
 
     @property
-    def version(self) -> int:
+    def version(self) -> str:
         return self.raw_data["version"]
 
     @property

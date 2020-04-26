@@ -27,7 +27,7 @@ class BlastbotCloudAPI:
         resp.raise_for_status()
         return [Device(data, self.auth) for data in await resp.json()]
 
-    async def async_get_device(self, id) -> Device:
+    async def async_get_device(self, id: int) -> Device:
         resp = await self.auth.request("get", f"device/{id}", params=DEVICE_DEFAULT_PARAMS)
         resp.raise_for_status()
         return Device(await resp.json(), self.auth)
@@ -40,7 +40,7 @@ class BlastbotCloudAPI:
         resp.raise_for_status()
         return [Control(data, self.auth) for data in await resp.json()]
 
-    async def async_get_control(self, id) -> Control:
+    async def async_get_control(self, id: int) -> Control:
         resp = await self.auth.request("get", f"control/{id}", params=CONTROL_DEFAULT_PARAMS)
         resp.raise_for_status()
         return Control(await resp.json(), self.auth)

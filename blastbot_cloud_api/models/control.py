@@ -1,3 +1,4 @@
+from typing import List
 from ..auth import Auth
 
 CONTROL_DEFAULT_PARAMS = {
@@ -46,7 +47,7 @@ class Control:
         return self.raw_data["type"]
 
     @property
-    def acSettings(self) -> str:
+    def acSettings(self) -> dict:
         return self.raw_data["acSettings"]
 
     @acSettings.setter
@@ -54,11 +55,11 @@ class Control:
         self.raw_data["acSettings"] = value
 
     @property
-    def buttons(self) -> str:
+    def buttons(self) -> List[dict]:
         return self.raw_data["buttons"]
 
     @property
-    def device(self) -> str:
+    def device(self) -> dict:
         return self.raw_data["device"]
 
     @property
@@ -66,23 +67,23 @@ class Control:
         return self.raw_data["icon"]
 
     @property
-    def order(self) -> str:
+    def order(self) -> int:
         return self.raw_data["order"]
 
     @property
-    def origin(self) -> str:
+    def origin(self) -> dict:
         return self.raw_data["origin"]
 
     @property
-    def owner(self) -> str:
+    def owner(self) -> dict:
         return self.raw_data["owner"]
 
     @property
-    def sharedControl(self) -> str:
+    def sharedControl(self) -> dict:
         return self.raw_data["sharedControl"]
 
     @property
-    def switches(self) -> str:
+    def switches(self) -> List[dict]:
         return self.raw_data["switches"]
 
     def switch_state(self) -> bool:
