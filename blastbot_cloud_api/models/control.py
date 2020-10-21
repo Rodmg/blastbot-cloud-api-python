@@ -120,7 +120,7 @@ class Control:
         currentTemp = current["temperature"] if current["temperature"] is not None else "25"
         currentFan = current["fan"] if current["fan"] is not None else "auto"
 
-        command = state if state is not None and currentState != state else "set"
+        command = state if state is not None and currentState != "on" else "set"
         temperature = temperature if temperature is not None else currentTemp
         fan = fan if fan is not None else currentFan
         body = {

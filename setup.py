@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='blastbot-cloud-api-python',
-    version='0.1.0',
+    version='0.1.1',
     description='Library for interfacing with Blastbot Cloud',
     long_description=README,
     long_description_content_type="text/markdown",
