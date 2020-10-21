@@ -87,7 +87,7 @@ await api.async_close()
 
 ### Development Requirements
 
-- python 3.7
+- python 3.8
 - pipenv
 
 ### Development setup
@@ -102,5 +102,5 @@ brew install pipenv
 Inside this folder:
 
 ```
-pipenv shell --python=3.7
+pipenv shell --python=3.8
 ```
